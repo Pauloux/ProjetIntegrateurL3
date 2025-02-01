@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc} %Pour l'encodage en utf-8
+\usepackage[T1]{fontenc} %Pour les accents
+\usepackage[french]{babel} %Pour les langues
+
+\usepackage{siunitx} %Pour les unités
+\usepackage{fancyhdr} %Pour les entêtes et bas de page
+\usepackage{graphicx} %Pour les figures
+\usepackage{mathtools} %Pour les maths
+\usepackage[margin=2.5cm]{geometry} %Pour les marges de la page
+\usepackage{hyperref} %Pour les liens et les métadonnées
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue,
+	pdfauthor={Paul ROUSSEAU},
+	pdftitle={Compte rendu de l'avancement du projet intégrateur au 27/01/2025}
+} %Pour modifier la couleur des liens
+\allowdisplaybreaks %Pour avoir une suite d'équations sur plusieurs pages
+
+%Configuration du style de la page
+\pagestyle{fancy}
+\setlength{\headheight}{14.5pt}
+\lhead{Projet intégrateur}
+\rhead{Compte rendu de l'avancement}
+
+\title{Compte rendu de l'avancement du projet intégrateur}
+\author{Paul ROUSSEAU}
+\date{Le 27 janvier 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Partie électronique}
+
+\begin{itemize}
+	\item Les Raspberry Pi ont été récupérées et mises en route.
+	\item Nous sommes en mesure de prendre une photo avec la caméra en contrôlant le temps d'exposition. Il est aussi possible de choisir le format des images enregistrées (raw ou jpeg). Nous n'avons pas encore pu vérifier que le format raw est lisible car nous n'avons pas de quoi les lire directement sur la Raspberry Pi.
+	\item Nous sommes en mesure d'allumer une LED sur la matrice 16x16. Il reste à pouvoir définir la couleur des LED. Il faut aussi que l'on arrive à utiliser la matrice en utilisant des fils entre la Raspberry Pi et la matrice afin de pouvoir placer librement la matrice de LED.
+	\item L'algorithme permettant de contrôler la matrice de LED et la caméra est théoriquement fonctionnel. Il est possible de définir l'ordre d'allumage des LED ainsi que leur couleur. Il reste à tester l'algorithme avec la caméra et la matrice de LED connectées pour voir si le résultat obtenu correspond à celui attendu, notamment pour vérifier que les délais sont pris en compte correctement.
+\end{itemize}
+
+\section{Partie mécanique}
+
+\begin{itemize}
+	\item Un début de plan est en cours d'élaboration. Il faut ensuite affiner les plans afin de répondre aux exigences du projet tels que le placement de la caméra, de la matrice de LED, de la lentille, etc.
+\end{itemize}
+
+\section{Partie optique}
+
+\begin{itemize}
+	\item La plupart des calculs des distances entre les différents éléments (objectif → échantillon $\approx \SI{4}{\milli\meter}$, échantillon → matrice $\approx \SI{8}{\centi\meter}$) ont été réalisés mais certains manquent (caméra → lentille, lentille → objectif). De plus, nous n'avons pas encore récupéré la lentille que nous utiliserons. Le choix de l'échantillon reste encore à déterminer, nous hésitons encore entre un wafer réaliser en TP le semestre précédent ou bien un échantillon qui nous serait fourni plus tard par M. JACQUOT.
+\end{itemize}
+
+\section{Résumé général de l'avancement du projet}
+
+Le projet avance beaucoup plus vite que prévu sur la partie électronique grâce à des bibliothèques Python. Les fonctionnalités avancées (temps d'exposition différent selon l'angle de la LED par exemple) se feront lorsque nous auront testé le projet afin de commencer par quelque chose de simple. \\
+La partie optique semble aussi bien avancée même s'il reste des calculs à réaliser pour le placement de certains éléments. \\
+Il faut maintenant se concentrer sur la partie mécanique afin de pouvoir réaliser des tests réels afin de vérifier si tout fonctionne correctement (placement des éléments optiques, algorithme, etc). Cela peut passer par une aide apportée à Jolan qui devait initialement gérer seul la partie mécanique mais qui se retrouve au final avec une charge de travail trop importante par rapport aux autres membres du groupe.
+
+\end{document}
