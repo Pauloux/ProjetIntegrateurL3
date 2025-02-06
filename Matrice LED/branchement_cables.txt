@@ -1,0 +1,9 @@
+Raspberry Pi       Unicorn HAT HD
+---------------------------------
+Broche 1 (3.3V)  -> 3.3V
+Broche 2 (5V)  -> 5V
+Broche 6 (GND)   -> GND
+Broche 19 (GPIO 10) -> MOSI
+Broche 23 (GPIO 11) -> SCLK
+Broche 24 (GPIO 8)  -> CE0
+
